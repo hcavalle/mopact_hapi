@@ -9,13 +9,15 @@
   "author": "Harrison Cavallero",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^8.4.0",
-    "joi": "^5.1.0",
-    "sequelize": "^2.0.0-rc7",
-    "sqlite3": "^3.0.4",
     "gulp": "^3.8.10",
     "gulp-nodemon": "^1.0.5",
-    "sequelize-cli": "^1.0.3"
+    "hapi": "^8.4.0",
+    "joi": "^5.1.0",
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^2.0.0-rc7",
+    "sequelize-cli": "^1.0.3",
+    "sqlite3": "^3.0.4"
   },
   "devDependencies": {
     "gulp": "^3.8.10",
