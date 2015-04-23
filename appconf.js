@@ -32,7 +32,7 @@ module.exports = function() {
   } else if (!obj.database['user']) {
     throw new Error('Missing constant database.user. ' +
       'Check your enviroment variables.');
-  } else if (!obj.database['password']) {
+  } else if (obj.database['password']==null) {
     throw new Error('Missing constant database.password. ' +
       'Check your enviroment variables.');
   } else if (!obj.database['database']) {
