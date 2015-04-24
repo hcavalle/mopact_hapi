@@ -8,6 +8,7 @@ module.exports = function() {
     application : {
       host : appConstants[env]['host'],
       port : appConstants[env]['port'],
+      routes: appConstants[env]['routes']
     },
     database : {
       host     : dbContants[env]['host'],
@@ -71,13 +72,19 @@ module.exports = function() {
         'url' : 'https://' + process.env.NODE_HOST + ':' + 
           process.env.NODE_PORT,
         'host' : process.env.NODE_HOST,
-        'port' : process.env.NODE_PORT
+        'port' : process.env.NODE_PORT,
+        'routes': {
+          'cors': true
+        },
       },
       'development' : {
         'url' : 'http://' + process.env.NODE_HOST + ':' + 
         process.env.NODE_PORT,
         'host' : process.env.NODE_HOST,
-        'port' : process.env.NODE_PORT
+        'port' : process.env.NODE_PORT,
+        'routes': {
+          'cors': true
+        },
       },
       'test' : {
         'url' : 'http://' + process.env.NODE_HOST + ':' + 

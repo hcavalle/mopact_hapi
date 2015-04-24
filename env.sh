@@ -19,7 +19,7 @@ else
     export DB_DEV_PASS=''
     export DB_DEV_NAME='mopact_prod'
 
-  else [ $NODE_ENV -eq 'stage' ]
+  else [ $NODE_ENV -eq 'test' ]
   #stage db
     export NODE_HOST='localhost'
     export NODE_PORT='8081'

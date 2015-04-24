@@ -27,10 +27,11 @@ RUN     export DB_DEV_PASS=''
 RUN     export DB_DEV_NAME='mopact_hapi_dev'
 
 # Bundle app source
-COPY . /src
+COPY ../ /src
 
 # Install app dependencies
 RUN cd /src; npm install
+RUN cd /src; source ./env.sh
 
 EXPOSE  8081
 
