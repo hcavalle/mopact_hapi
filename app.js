@@ -8,9 +8,12 @@ server.connection(config.application);
 
 server.route(require('./lib/routes'));
 
-models.sequelize.sync().then(function() {
+models.sequelize.sync({force: true}).then(function() {
   server.start(function () {
     console.log('running on '+config.application.port);
   });
+}).catch(function(error) {
+  console.log(error);
 });
+
     
