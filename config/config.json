@@ -1,23 +1,14 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "password",
-    "database": "mopact_hapi_dev",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "mopact_hapi_test",
-    "host": "127.0.0.1",
-    "dialect": "sqlite"
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite"
   }
 }
