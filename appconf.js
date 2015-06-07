@@ -1,6 +1,7 @@
 module.exports = function() {
 
   var env = process.env.NODE_ENV || 'development';
+  console.log('env',env);
   var dbContants = databaseConfig();
   var appConstants = applicationConfig();
 
@@ -57,7 +58,7 @@ module.exports = function() {
         'password' : process.env.DB_DEV_PASS,
         'database' : process.env.DB_DEV_NAME
       },
-      'test' : {
+      'localhost' : {
         'host' : 'localhost',
         'user' : process.env.DB_TEST_USER,
         'password' : process.env.DB_TEST_PASS,
@@ -86,7 +87,7 @@ module.exports = function() {
           'cors': true
         },
       },
-      'test' : {
+      'localhost' : {
         'url' : 'http://' + process.env.NODE_HOST + ':' + 
         process.env.NODE_PORT,
         'host' : process.env.NODE_HOST,

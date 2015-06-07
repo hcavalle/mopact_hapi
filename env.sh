@@ -9,7 +9,7 @@ then
   export DB_DEV_PASS=''
   export DB_DEV_NAME='mopact_hapi_dev'
 else
-  if [ $NODE_ENV -eq 'production' ]
+  if [ "$NODE_ENV" -eq "production" ]
   then
   #prod db
     export NODE_HOST='localhost'
@@ -19,7 +19,7 @@ else
     export DB_DEV_PASS=''
     export DB_DEV_NAME='mopact_prod'
 
-  else [ $NODE_ENV -eq 'test' ]
+  else [ "$NODE_ENV" -eq "test" ]
   #stage db
     export NODE_HOST='localhost'
     export NODE_PORT='8081'
